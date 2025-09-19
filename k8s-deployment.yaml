@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: resume-website
+  template:
+    metadata:
+      labels:
+        app: resume-website
+    spec:
+      containers:
+      - name: resume-website
+        image: myacr.azurecr.io/resume-website:latest
+        ports:
+        - containerPort: 8080

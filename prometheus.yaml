@@ -1,0 +1,6 @@
+global:
+  scrape_interval: 15s
+scrape_configs:
+  - job_name: 'resume-website'
+    static_configs:
+      - targets: ['resume-website-service:80']
