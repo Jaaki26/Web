@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Resume - Janaki Rao Padala</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="myphoto.jpg" alt="My Photo" class="profile-pic">
+    <h1>Janaki Rao Padala</h1>
+    <p>DevOps Engineer | M365 Administrator</p>
+
+    <div class="tabs">
+      <button onclick="showTab('education')">Education</button>
+      <button onclick="showTab('skills')">Skills</button>
+      <button onclick="showTab('experience')">Experience</button>
+      <button onclick="showTab('certifications')">Certifications</button>
+    </div>
+
+    <div id="education" class="tab-content">
+      <h2>Education</h2>
+      <table>
+        <tr><th>College</th><th>Degree</th><th>Year</th></tr>
+        <tr><td>Nishtha College of Engineering, Hyderabad</td><td>B.Tech in ECE</td><td>2015–2019</td></tr>
+      </table>
+    </div>
+
+    <div id="skills" class="tab-content" style="display:none;">
+      <h2>Skills</h2>
+      <table>
+        <tr><th>Category</th><th>Technologies</th></tr>
+        <tr><td>Cloud Platforms</td><td>AWS, Azure (AD, Intune, AKS, M365)</td></tr>
+        <tr><td>DevOps Tools</td><td>Jenkins, GitHub Actions, Terraform, Ansible, Helm, Docker, Kubernetes</td></tr>
+        <tr><td>Scripting</td><td>Bash, PowerShell, YAML, Python</td></tr>
+        <tr><td>Monitoring</td><td>Prometheus, Grafana, CloudWatch, ELK Stack</td></tr>
+      </table>
+    </div>
+
+    <div id="experience" class="tab-content" style="display:none;">
+      <h2>Experience</h2>
+      <table>
+        <tr><th>Role</th><th>Company</th><th>Duration</th></tr>
+        <tr><td>DevOps Engineer</td><td>TCS</td><td>Sep 2023 – Present</td></tr>
+        <tr><td>M365 & Azure Administrator</td><td>TCS</td><td>Apr 2021 – Sep 2023</td></tr>
+      </table>
+      <p><b>Key Contributions:</b></p>
+      <ul>
+        <li>CI/CD pipelines with Jenkins & GitHub Actions</li>
+        <li>Kubernetes deployments on EKS & AKS with Helm</li>
+        <li>Infrastructure automation with Terraform & Ansible</li>
+        <li>Monitoring with Prometheus & Grafana</li>
+      </ul>
+    </div>
+
+    <div id="certifications" class="tab-content" style="display:none;">
+      <h2>Certifications</h2>
+      <table>
+        <tr><th>Certification</th></tr>
+        <tr><td>Microsoft Certified: Azure Administrator Associate (AZ-104)</td></tr>
+        <tr><td>AWS Certified: Cloud Practitioner</td></tr>
+        <tr><td>Terraform Associate</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+      document.getElementById(tabId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
